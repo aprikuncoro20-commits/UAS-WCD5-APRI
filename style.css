@@ -1,0 +1,198 @@
+/* Aturan Palet Warna Dasar Website (Deep Blue & Clean Gray) */
+:root {
+    --primary-color: #1a365d;
+    --secondary-color: #2b6cb0;
+    --accent-color: #d69e2e;
+    --text-color: #2d3748;
+    --bg-light: #f7fafc;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+/* 1. Pengaturan Menu Navigasi Atas */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Otomatis turun ke bawah jika layar HP terlalu sempit */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.5rem;
+}
+
+header .logo b {
+    color: var(--accent-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* 2. Pengaturan Bagian Beranda / Hero Section */
+.hero {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* 3. Pengaturan Layout Kontainer Utama */
+.container {
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+    max-width: 100%;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-top: 1.5rem;
+    border-left: 5px solid var(--secondary-color);
+}
+
+/* 4. Pengaturan Tabel Responsif */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* Memunculkan scrollbar horizontal jika ukuran layar kekecilan */
+    margin-top: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+table th, table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+table tr:nth-child(even) {
+    background-color: #edf2f7;
+}
+
+/* 5. Kisi-Kisi / Grid Galeri Gambar Responsif */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Fleksibel mengikuti lebar resolusi layar browser */
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-item {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Gambar otomatis terpotong rapi tanpa merusak aspek rasio asli gambar */
+    display: block;
+}
+
+.img-caption {
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* 6. Pengaturan Kaki Halaman / Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
