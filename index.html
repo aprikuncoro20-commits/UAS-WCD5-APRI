@@ -93,7 +93,57 @@
             </div>
         </div>
     </section>
+<section id="uas-form" class="container bg-light">
+        <div class="form-container">
+            <h2>📝 Buku Tamu & Feedback Pembaca</h2>
+            <p>Tinggalkan jejak, kritik saran, atau pesan kolaborasi literasi untuk pengembangan karya digital saya ke depan.</p>
+            
+            <form id="reader-form" onsubmit="saveFeedback(event)">
+                
+                <div class="form-group">
+                    <label for="reader-name">Nama Lengkap:</label>
+                    <input type="text" id="reader-name" required minlength="3" placeholder="Masukkan nama Anda...">
+                </div>
 
+                <div class="form-group">
+                    <label for="reader-email">Alamat Email:</label>
+                    <input type="email" id="reader-email" required placeholder="nama@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Tujuan Mengisi Buku Tamu:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="message-type" value="Kritik & Saran" required> 💬 Kritik/Saran</label>
+                        <label><input type="radio" name="message-type" value="Ajak Kolaborasi" required> 🤝 Kolaborasi</label>
+                        <label><input type="radio" name="message-type" value="Apresiasi Karya" required> 📚 Apresiasi Karya</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reader-message">Isi Pesan / Catatan:</label>
+                    <textarea id="reader-message" required minlength="10" rows="4" placeholder="Tulis pesan Anda minimal 10 karakter..."></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" id="btn-submit-guest" class="btn-form-save">💾 Kirim & Simpan Data</button>
+                    <button type="button" id="btn-update-guest" class="btn-form-update hidden" onclick="enableGuestUpdate()">✏️ Update Data</button>
+                </div>
+            </form>
+
+            <div id="guestbook-status" class="status-box hidden">
+                <h4>✓ Data Berhasil Direkam di LocalStorage!</h4>
+                <p>Terima kasih <strong id="out-name"></strong> (<span id="out-email"></span>). Pesan Anda dengan kategori <em id="out-type"></em> telah aman tersimpan.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Jurnal Kreatif. Dibuat secara mandiri untuk pemenuhan UTS Web Client Development.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
     <footer>
         <p>&copy; 2026 Jurnal Kreatif. Dibuat secara mandiri untuk pemenuhan UTS Web Client Development.</p>
     </footer>
